@@ -1,44 +1,50 @@
-# ⚔️ War: Battle Simulator (Estrutura de Dados)
-> **Nível Mestre:** Implementação de Alocação Dinâmica, Ponteiros e Simulação de Combate.
+# ⚔️ Projeto WAR: Simulador de Estratégia (Estácio)
+> **Disciplina:** Estrutura de Dados em C  
+> **Níveis:** Novato 🟢 | Aventureiro 🔵 | Mestre 🟣
 
-![C](https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
-![Git](https://img.shields.io/badge/Status-Finalizado-success?style=for-the-badge&logo=git&logoColor=white)
+![C](https://img.shields.io/badge/Linguagem-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
+![Git](https://img.shields.io/badge/Controle_de_Versão-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Estacio](https://img.shields.io/badge/Instituição-Estácio-005696?style=for-the-badge)
 
-Este repositório contém a evolução de um sistema de gerenciamento de territórios inspirado no jogo *War*. O projeto percorre desde conceitos básicos de lógica até o gerenciamento avançado de memória em C.
-
----
-
-### 📂 Estrutura do Projeto
-
-O repositório está dividido em etapas de aprendizado:
-
-1.  **`novato.c`**: Implementação inicial utilizando vetores estáticos e menus simples.
-2.  **`aventureiro.c`**: Versão avançada com as seguintes funcionalidades:
-    * **Alocação Dinâmica:** Uso de `calloc` para definir o tamanho do mapa em tempo de execução.
-    * **Ponteiros:** Manipulação direta de endereços de memória para otimização.
-    * **Sistema de Batalha:** Simulação de ataques com `rand()` e `srand()`.
-    * **Gestão de Memória:** Implementação rigorosa de `free()` para evitar Memory Leaks.
+Este repositório contém o trabalho prático desenvolvido para a disciplina de **Estrutura de Dados**. O projeto consiste em um simulador de batalha inspirado no jogo *War*, evoluindo em complexidade técnica conforme os requisitos acadêmicos.
 
 ---
 
-### 🕹️ Funcionalidades do Nível Mestre
+## 🚀 Evolução do Projeto
 
-| Recurso | Descrição |
-| :--- | :--- |
-| **Ataque Estratégico** | Escolha entre territórios atacantes e defensores. |
-| **Simulação de Dados** | Rolagem de dados (1-6) para decidir o vencedor da rodada. |
-| **Dominação** | Conquista de territórios e transferência automática de tropas. |
-| **Validação de Cor** | Impede ataques entre territórios do mesmo exército. |
+O trabalho foi estruturado em três níveis progressivos, demonstrando o domínio de diferentes conceitos da linguagem C:
+
+### 🟢 Nível Novato
+* **Foco:** Fundamentos de Lógica e Sintaxe.
+* **Conceitos:** Uso de `struct` para territórios, vetores estáticos, laços de repetição (`do-while`) e menus interativos.
+* **Arquivo:** `novato.c`
+
+### 🔵 Nível Aventureiro
+* **Foco:** Gerenciamento de Memória Dinâmica.
+* **Conceitos:** Implementação de `malloc`/`calloc`, uso de **Ponteiros** para manipulação de dados e lógica de combate aleatória com `rand()`.
+* **Arquivo:** `aventureiro.c`
+
+### 🟣 Nível Mestre
+* **Foco:** Modularização e Arquitetura de Software.
+* **Conceitos:** Divisão total em funções (modularização), sistema de **Missões Secretas** sorteadas via código e passagem de parâmetros por referência (`char**`).
+* **Arquivo:** `mestre.c`
 
 ---
 
-### 🚀 Como Compilar e Rodar
+## 🛠️ Tecnologias e Conceitos Aplicados
 
-Para testar a versão mais recente (Aventureiro/Mestre):
+O projeto utiliza conceitos avançados de estrutura de dados para garantir eficiência:
 
-```bash
-# 1. Compile o arquivo principal
-gcc aventureiro.c -o war_mestre.exe
+* **Alocação Dinâmica:** Memória alocada conforme a necessidade do usuário, evitando desperdício.
+* **Ponteiros:** Acesso direto à memória para atualização de tropas e cores em tempo real durante as batalhas.
+* **Modularização:** Código limpo e funções específicas para cada ação (atacar, cadastrar, exibir).
 
-# 2. Execute o simulador
-./war_mestre.exe
+
+
+---
+
+## 🕹️ Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/simoneraeder/estrutura-de-dados-war-domine-territorios.git](https://github.com/simoneraeder/estrutura-de-dados-war-domine-territorios.git)
