@@ -1,43 +1,44 @@
-# 🗺️ War: Domine Territórios
-> **Status:** Finalizado / Em Desenvolvimento 🚀
+# ⚔️ War: Battle Simulator (Estrutura de Dados)
+> **Nível Mestre:** Implementação de Alocação Dinâmica, Ponteiros e Simulação de Combate.
 
 ![C](https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
-![Git](https://img.shields.io/badge/Version_Control-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VSCode](https://img.shields.io/badge/Editor-VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Git](https://img.shields.io/badge/Status-Finalizado-success?style=for-the-badge&logo=git&logoColor=white)
 
-### 📝 Sobre o Projeto
-Este é um sistema de gerenciamento de dados desenvolvido para a disciplina de **Estrutura de Dados**. O objetivo é simular o controle de ocupação de um mapa do jogo *War*, utilizando estruturas de dados em C para organizar exércitos, frentes de batalha e distribuição de tropas.
+Este repositório contém a evolução de um sistema de gerenciamento de territórios inspirado no jogo *War*. O projeto percorre desde conceitos básicos de lógica até o gerenciamento avançado de memória em C.
 
 ---
 
-### 🕹️ Interface do Sistema
-O sistema opera via Terminal com um menu interativo moderno e tratamento de buffer para entradas de texto:
+### 📂 Estrutura do Projeto
 
-| Opção | Ação | Descrição |
-| :--- | :--- | :--- |
-| `1` | **Cadastrar** | Adiciona novos territórios com suporte a nomes compostos. |
-| `2` | **Listar** | Exibe uma tabela organizada com o status atual do mapa. |
-| `0` | **Sair** | Encerra a execução do programa com segurança. |
+O repositório está dividido em etapas de aprendizado:
 
----
-
-### 🛠️ Diferenciais Técnicos
-- **Structs Avançadas:** Organização de dados heterogêneos para representar territórios.
-- **Buffer Cleansing:** Implementação de ` %[^\n]s` para evitar erros de leitura com espaços.
-- **Modularidade:** Código estruturado para facilitar futuras expansões (como listas encadeadas).
+1.  **`novato.c`**: Implementação inicial utilizando vetores estáticos e menus simples.
+2.  **`aventureiro.c`**: Versão avançada com as seguintes funcionalidades:
+    * **Alocação Dinâmica:** Uso de `calloc` para definir o tamanho do mapa em tempo de execução.
+    * **Ponteiros:** Manipulação direta de endereços de memória para otimização.
+    * **Sistema de Batalha:** Simulação de ataques com `rand()` e `srand()`.
+    * **Gestão de Memória:** Implementação rigorosa de `free()` para evitar Memory Leaks.
 
 ---
 
-### 🚀 Como Rodar
+### 🕹️ Funcionalidades do Nível Mestre
+
+| Recurso | Descrição |
+| :--- | :--- |
+| **Ataque Estratégico** | Escolha entre territórios atacantes e defensores. |
+| **Simulação de Dados** | Rolagem de dados (1-6) para decidir o vencedor da rodada. |
+| **Dominação** | Conquista de territórios e transferência automática de tropas. |
+| **Validação de Cor** | Impede ataques entre territórios do mesmo exército. |
+
+---
+
+### 🚀 Como Compilar e Rodar
+
+Para testar a versão mais recente (Aventureiro/Mestre):
+
 ```bash
-# Clone o repositório
-git clone [https://github.com/simoneraeder/estrutura-de-dados-war-domine-territorios.git](https://github.com/simoneraeder/estrutura-de-dados-war-domine-territorios.git)
+# 1. Compile o arquivo principal
+gcc aventureiro.c -o war_mestre.exe
 
-# Entre na pasta
-cd estrutura-de-dados-war-domine-territorios
-
-# Compile
-gcc territorios.c -o war_game.exe
-
-# Execute
-./war_game.exe
+# 2. Execute o simulador
+./war_mestre.exe
